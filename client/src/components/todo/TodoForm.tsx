@@ -37,11 +37,6 @@ export function TodoForm({
     handleSubmit,
     formState: { errors },
   } = useForm<TodoFormData>({
-    defaultValues: {
-      title: "",
-      description: "",
-      dueDate: new Date().toISOString().split("T")[0],
-    },
     values: {
       title: initialData?.title ?? "",
       description: initialData?.description ?? "",
