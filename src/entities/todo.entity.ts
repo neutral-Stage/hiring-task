@@ -1,9 +1,18 @@
-import { Entity, Column, ManyToOne, JoinColumn } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+} from "typeorm";
 import { CoreEntity } from "./core.entity";
 import { UserEntity } from "./user.entity";
 
 @Entity("todos")
 export class TodoEntity extends CoreEntity {
+  @PrimaryGeneratedColumn()
+  id: string;
+
   @Column()
   title: string;
 
